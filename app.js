@@ -76,7 +76,7 @@ app.post("/", (req, res) => {
             return console.log(error);
         }
         console.log('Message sent: %s', info.messageId);
-        res.status(200).sendFile("views/index.html", { root: __dirname });
+        res.status(200).sendFile("views/sent.html", { root: __dirname });
     });
 
 
