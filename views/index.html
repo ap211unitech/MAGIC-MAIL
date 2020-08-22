@@ -16,7 +16,11 @@
 <body>
     <div class="container mt-4">
         <h1 style="text-align: center;font-family: Arial, Helvetica, sans-serif;">Magic Mail</h1>
+
+        <!-- Form -->
         <form method="POST" action="/">
+
+            <!-- Sender section -->
             <div class="form-group">
                 <div style="display: flex;align-items: center;margin-top: 18px;margin-left: 17px;">
                     <strong style="margin-right: 10px;">From</strong>
@@ -24,14 +28,17 @@
                         name="sender" required>
                 </div>
 
+                <!-- Password section -->
                 <div style="display: flex;align-items: center;margin-top: 18px;margin-left: -16px;">
                     <strong style="margin-right: 10px;">Password</strong>
                     <input type="password" class="form-control" aria-describedby="emailHelp" name="password" required>
                 </div>
 
-                <small style="margin-left: 66px;" id="emailHelp" class="form-text text-muted">We do not storing your password</small>
+                <small style="margin-left: 66px;" id="emailHelp" class="form-text text-muted">We do not storing your
+                    password</small>
 
 
+                <!-- Recievers section -->
                 <div style="display: flex;align-items: center;margin-top: 18px;margin-left: 37px;">
                     <strong style="margin-right: 10px;">To</strong>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -42,12 +49,16 @@
                     else.</small>
             </div>
 
+            <!-- Title section -->
             <div style="display: flex;align-items: center;margin-top: 18px;margin-left: 20px;">
                 <strong style="margin-right: 10px;">Title</strong>
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                     name="title" required>
             </div>
 
+
+
+            <!-- Subject section -->
             <div class="form-group mt-4">
                 <div style="display: flex;align-items: flex-start;">
 
@@ -61,6 +72,8 @@
 
             </div>
 
+
+            <!-- Send Button -->
             <button type="submit" class="btn btn-primary" style="margin-left: 58px;">Send</button>
         </form>
 
