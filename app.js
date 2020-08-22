@@ -13,18 +13,18 @@ app.set("view engine", "html");
 // app.set("/public", express.static("/public"));
 
 
-let transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false, // true for 465, false for other ports
-    auth: {
-        user: 'a9719647480@gmail.com', // generated ethereal user
-        pass: '9719647480'  // generated ethereal password
-    },
-    tls: {
-        rejectUnauthorized: false
-    }
-});
+// let transporter = nodemailer.createTransport({
+//     host: 'smtp.gmail.com',
+//     port: 587,
+//     secure: false, // true for 465, false for other ports
+//     auth: {
+//         user: 'a9719647480@gmail.com', // generated ethereal user
+//         pass: '9719647480'  // generated ethereal password
+//     },
+//     tls: {
+//         rejectUnauthorized: false
+//     }
+// });
 
 
 
@@ -58,15 +58,34 @@ app.get("/", (req, res) => {
 })
 
 app.post("/", (req, res) => {
-    let { mails, content } = req.body;
+
+    let { sender, password, mails, title, content } = req.body;
+
     // console.log(mails.split(","), content)
+    
     let allMails = mails.split(",");
-    console.log(content)
+    
+    console.log(req.body);
+
+    let transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 587,
+        secure: false, // true for 465, false for other ports
+        auth: {
+            user: sender, // generated ethereal user
+            pass: password  // generated ethereal password
+        },
+        tls: {
+            rejectUnauthorized: false
+        }
+    });
+
+
 
     let mailOptions = {
-        from: '<a9719647480@gmail.com>', // sender address
+        from: sender, // sender address
         to: allMails.map(m => m), // list of receivers
-        subject: 'Node Contact Request', // Subject line
+        subject: title, // Subject line
         text: content, // plain text body
         // html: `<pre>${content}</pre>` // html body
     };
