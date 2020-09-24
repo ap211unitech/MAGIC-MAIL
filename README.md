@@ -2,7 +2,7 @@
 
 #### It is a BackEnd Project with Node.Js and Express
 
-#### It sends Mail using NodeMailer from a Gmail Id to any Other account Id.It can also used to send Email to multipe Id's seprated by ","
+#### It sends Mail using NodeMailer from a Gmail Id to any Other account Id. It can also used to send Email to multipe Id's seprated by ,
 
 ## Want to Use it ?
 
