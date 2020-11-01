@@ -68,6 +68,6 @@ app.post("/", (req, res) => {
 
 
 //Server Listener
-app.listen(80, () => {
-    console.log("Server started at port 80");
+app.listen(8000, () => {
+    console.log("Server started at port 8000");
 })

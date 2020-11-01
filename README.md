@@ -12,6 +12,6 @@
 
 #### 3) Type "npm start"
 
-#### 4) Go to browser and type "localhost" or "127.0.0.1"
+#### 4) Go to browser and type "localhost:8000" or "127.0.0.1:8000"
 
 #### 5) Now You can send Email to any one
